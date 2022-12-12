@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị nhỏ nhất</title>
+</head>
+<body>
+    <script>
+        function timMin(arr){
+            if(arr.length == 0)
+            return "Mảng rỗng không có phần tử";
+            let min = arr[0];
+            for (let i=1; i<arr.length; i++){
+                if(min > arr[i]){
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let min1 = timMin(arr1);
+        document.write(min1 + "<br>");
+
+        let arr2 = [7, 12, 6, 9, 20, 56, 89];
+        let min2 = timMin(arr2);
+        document.write(min2 + "<br>");
+
+        let arr3 = [];
+        let min3 = timMin(arr3);
+        document.write(min3 + "<br>");
+
+        let arr4 = [0, 0, 0, 0, 0, 0, 0];
+        let min4 = timMin(arr4);
+        document.write(min4 + "<br>");
+    </script>
+</body>
+</html>
